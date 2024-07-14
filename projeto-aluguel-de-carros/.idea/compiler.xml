@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="aluguel-carros" />
+        <module name="eurekaserver" />
+        <module name="reservation" />
+        <module name="mscloudgateway" />
+        <module name="ms-email" />
+        <module name="users" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="aluguel-carros" options="-parameters" />
+      <module name="eurekaserver" options="-parameters" />
+      <module name="ms-email" options="-parameters" />
+      <module name="mscloudgateway" options="-parameters" />
+      <module name="reservation" options="-parameters" />
+      <module name="users" options="-parameters" />
+    </option>
+  </component>
+</project>

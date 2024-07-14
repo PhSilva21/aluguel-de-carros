@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: ms-reservation
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+server:
+  port: 8080
+
+mq:
+  queues:
+    sending-emails: sending-emails

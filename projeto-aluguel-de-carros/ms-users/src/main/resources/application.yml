@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ms-users
+    rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
+
+server:
+  port: 8082
+
+mq:
+  queues:
+    sending-emails: sending-emails
+
