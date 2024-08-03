@@ -10,6 +10,8 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Getter
 @Setter
 @Entity(name = "cars")
@@ -24,7 +26,7 @@ public class Car {
 	private String name;
 
 
-	private Double dailyPrice;
+	private BigDecimal dailyPrice;
 
 
 	private Boolean available;
@@ -37,7 +39,7 @@ public class Car {
 	}
 	
 
-	public Car(String name, Double dailyPrice, Boolean available, Category category) {
+	public Car(String name, BigDecimal dailyPrice, Boolean available, Category category) {
 		this.name = name;
 		this.dailyPrice = dailyPrice;
 		this.available = available;

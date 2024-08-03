@@ -4,6 +4,8 @@ import com.bandeira.aluguelcarros.model.Category;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
+import java.math.BigDecimal;
+
 public record CarRequest(
 
         @NotNull(message = "Name cannot be null")
@@ -11,7 +13,7 @@ public record CarRequest(
         String name,
 
         @NotNull(message = "dailyPrice cannot be null")
-        Double dailyPrice,
+        BigDecimal dailyPrice,
 
         Boolean available,
 
