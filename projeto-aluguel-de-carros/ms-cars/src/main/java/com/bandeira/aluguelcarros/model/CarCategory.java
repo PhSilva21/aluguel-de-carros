@@ -1,6 +1,6 @@
 package com.bandeira.aluguelcarros.model;
 
-public enum Category {
+public enum CarCategory {
 
     SEDAN,
 

@@ -8,15 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="aluguel-carros" />
+        <module name="eurekaserver" />
         <module name="reservation" />
         <module name="mscloudgateway" />
         <module name="ms-email" />
         <module name="users" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="eurekaserver" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

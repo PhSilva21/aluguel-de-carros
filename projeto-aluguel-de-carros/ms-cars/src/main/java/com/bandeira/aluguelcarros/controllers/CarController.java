@@ -35,8 +35,8 @@ public class CarController {
 	}
 	
 	@PostMapping("/update")
-	public ResponseEntity<Void> update(@RequestParam Long id, @RequestBody UpdateCarDTO updateCarDTO){
-		carService.update(id, updateCarDTO);
+	public ResponseEntity<Void> update(@RequestBody UpdateCarDTO updateCarDTO){
+		carService.update(updateCarDTO);
 		return ResponseEntity.ok().build();
 	}
 

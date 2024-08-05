@@ -5,8 +5,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -32,14 +30,14 @@ public class Car {
 	private Boolean available;
 
 
-	private Category category;
+	private CarCategory category;
 
 	public Car() {
 		super();
 	}
 	
 
-	public Car(String name, BigDecimal dailyPrice, Boolean available, Category category) {
+	public Car(String name, BigDecimal dailyPrice, Boolean available, CarCategory category) {
 		this.name = name;
 		this.dailyPrice = dailyPrice;
 		this.available = available;

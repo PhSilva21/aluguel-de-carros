@@ -1,6 +1,6 @@
 package com.bandeira.aluguelcarros.dto;
 
-import com.bandeira.aluguelcarros.model.Category;
+import com.bandeira.aluguelcarros.model.CarCategory;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -17,7 +17,7 @@ public record CarRequest(
 
         Boolean available,
 
-        Category category
+        CarCategory category
 
 ) {
 }

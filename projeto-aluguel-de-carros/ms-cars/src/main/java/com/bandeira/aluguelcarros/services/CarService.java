@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 import com.bandeira.aluguelcarros.dto.CarRequest;
 import com.bandeira.aluguelcarros.dto.UpdateCarDTO;
-import com.bandeira.aluguelcarros.model.Category;
+import com.bandeira.aluguelcarros.model.CarCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -49,37 +49,37 @@ public class CarService {
 	}
 
 	
-	public void update(Long id, UpdateCarDTO updateCarDTO) {
-		var car = carRepository.findById(id).orElseThrow(CarNotFoundException::new);
+	public void update(UpdateCarDTO updateCarDTO) {
+		var car = carRepository.findById(updateCarDTO.id()).orElseThrow(CarNotFoundException::new);
 
 		car.setName(updateCarDTO.name());
 		car.setDailyPrice(updateCarDTO.dailyPrice());
 		car.setAvailable(updateCarDTO.available());
-		car.setAvailable(updateCarDTO.available());
+		car.setCategory(updateCarDTO.category());
 
 		carRepository.save(car);
 	}
 
 	public List<Car> findByHatch(){
-		return carsAvailable().stream().filter(c -> c.getCategory().equals(Category.HATCH))
+		return carsAvailable().stream().filter(c -> c.getCategory().equals(CarCategory.HATCH))
 				.collect(Collectors.toList());
 	}
 
 
 	public List<Car> findByMinivan(){
-		return carsAvailable().stream().filter(c -> c.getCategory().equals(Category.MINIVAN))
+		return carsAvailable().stream().filter(c -> c.getCategory().equals(CarCategory.MINIVAN))
 				.collect(Collectors.toList());
 	}
 
 
 	public List<Car> findBySedan(){
-		return carsAvailable().stream().filter(c -> c.getCategory().equals(Category.SEDAN))
+		return carsAvailable().stream().filter(c -> c.getCategory().equals(CarCategory.SEDAN))
 				.collect(Collectors.toList());
 	}
 
 
 	public List<Car> findBySporty(){
-		return carsAvailable().stream().filter(c -> c.getCategory().equals(Category.SPORTY))
+		return carsAvailable().stream().filter(c -> c.getCategory().equals(CarCategory.SPORTY))
 				.collect(Collectors.toList());
 	}
 
