@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @AllArgsConstructor
@@ -31,12 +32,12 @@ public class Reservation {
 
     private StatusReservation statusReservation;
 
-    private Double value;
+    private BigDecimal value;
 
     private LocalDateTime bookingDate;
 
     public Reservation(String email, String car, LocalDateTime withdrawal, LocalDateTime devolution,
-                       StatusReservation statusReservation, Double value, LocalDateTime bookingDate) {
+                       StatusReservation statusReservation, BigDecimal value, LocalDateTime bookingDate) {
         this.email = email;
         this.car = car;
         this.withdrawal = withdrawal;

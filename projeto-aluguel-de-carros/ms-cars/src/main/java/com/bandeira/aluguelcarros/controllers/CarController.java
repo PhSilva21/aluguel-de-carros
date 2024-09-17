@@ -26,8 +26,8 @@ public class CarController {
 		var car = carService.createCar(carRequest);
 		return ResponseEntity.ok().body(carRequest);
 	}
-	
-	
+
+
 	@GetMapping("/name")
     public ResponseEntity<Car> findByNome(@RequestParam @Param("name") String name){
 		Car var = carService.findByName(name);

@@ -32,7 +32,7 @@ public class CarService {
 
 		return carRequest;
 	}
-	
+
 	public List<Car> carsAvailable() {
 		return carRepository.findAll().stream().filter(c -> c.getAvailable().equals(true))
 				 .collect(Collectors.toList());
@@ -48,7 +48,7 @@ public class CarService {
 		return carRepository.findById(id).orElseThrow(CarNotFoundException::new);
 	}
 
-	
+
 	public void update(UpdateCarDTO updateCarDTO) {
 		var car = carRepository.findById(updateCarDTO.id()).orElseThrow(CarNotFoundException::new);
 
